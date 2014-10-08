@@ -24,10 +24,10 @@
 }());
 (function() {
 	var player;
-	var turndownAt = 20
-	var numTurntAnimations = 10
+	var turndownAt = 30
+	var numTurntAnimations = 4
 	var turntDown = false;
-	var maxNodes = 1000;
+	var maxNodes = 2000;
 	var animationCSS = {
 		'tdfw_intro': 'tdfwIntro 1s infinite ease-in-out',
 		'turntDown': function() {
@@ -42,7 +42,7 @@
 		parent.style.zIndex = 5000;
 		parent.style.right = 0;
 		parent.style.top = 0
-		parent.style.opacity = 0.2
+		parent.style.opacity = 0.1
 		var div = document.createElement('div')
 		div.id = "tdfw"
 		parent.appendChild(div)
@@ -52,7 +52,7 @@
 			parent.style.opacity = 1
 		}
 		parent.onmouseout = function() {
-			parent.style.opacity = 0.2
+			parent.style.opacity = 0.1
 		}
 		parent.style.webkitTransition = 'opacity 0.3s ease-in-out'
 		parent.style.transition = 'opacity 0.3s ease-in-out'
@@ -105,7 +105,7 @@
 			removeCurStyles()
 		}
 	}
-	//<iframe width="560" height="315" src="//www.youtube.com/embed/HMUDVMiITOU?autoplay=1" frameborder="0" allowfullscreen></iframe>
+	//<iframe width="560" height="315" src="//www.youtube.com/embed/MK6TXMsvgQg?autoplay=1" frameborder="0" allowfullscreen></iframe>
 	
 	function setupAnimations() {
 		var numKeyFrames = 10
