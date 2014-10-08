@@ -91,6 +91,29 @@
     <div id='img'></div>
     <p> Make sure the bookmarks bar is showing. Now, drag the button below the the bar. Next, navigate to your favorite website, and then <span id="dfw">click dat button</span> </p>
     <a id="bookmarklet" href='javascript:(function()%7Bjavascript:var%20s%3Ddocument.createElement(%27script%27)%3Bs.setAttribute(%27src%27,%27https://xyntrix.github.io/turndownforwhatjs/tdfw.js%27)%3Bdocument.body.appendChild(s)%3B%7D)()%3B'>everydayisagreatday</a>
+  <script>
+
+var COLOR = 999999
+var woot = 0
+function stoploop() {
+document.bgColor = '#fff';
+clearTimeout(loopID);
+}
+function loopBackground() {
+if (COLOR > 0) {
+document.bgColor = '#' + COLOR
+COLOR -= 111111
+loopID = setTimeout("loopBackground()",1)
+} else {
+document.bgColor = '#000000'
+woot += 10
+COLOR = 999999
+COLOR -= woot
+loopID = setTimeout("loopBackground()",1)
+   }
+}
+  window.onload = loopBackground();
+  </script>
 
   <script>
     //HMIeMb7
